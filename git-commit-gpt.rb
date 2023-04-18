@@ -14,7 +14,18 @@ class GitCommitGpt < Formula
 	end
   
 	test do
-	  system "just", "test"
+		system "git-commit-gpt", "--help"
+		system "git-commit-gpt", "--version"
 	end
+
+	def caveats
+		<<~EOS
+		  To add your OPENAI_API_KEY to the git-commit-gpt configuration, run the following command:
+
+			printf "Enter your OPENAI_API_KEY: " && read -rs api_key && mkdir ~/.happycommit >> /dev/null && echo "OPENAI_API_KEY = \\\"$api_key\\\"" >> ~/.happycommit/config.toml
+
+		  This command will prompt you to enter your API key and then add it to the ~/.happycommit/config.toml file.
+		EOS
+	  end
   end
   
