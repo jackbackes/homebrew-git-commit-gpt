@@ -1,8 +1,9 @@
 class GitCommitGpt < Formula
 	desc "A tool for creating better Git commit messages using OpenAI's GPT"
 	homepage "https://github.com/jackbackes/happycommit"
+	version "0.2.1"
 	url "https://github.com/jackbackes/happycommit/archive/refs/tags/v0.2.1.tar.gz"
-	sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+	sha256 "008e826be59cef14b0616ee44bd9e1620fbdd920b3f997c02713802b90d426e7"
 	license "Apache-2.0"
   
 	depends_on "rust" => :build
